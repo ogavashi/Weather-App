@@ -1,0 +1,232 @@
+:root {
+  --sunny: linear-gradient(
+    90deg,
+    rgba(255, 188, 148, 1) 0%,
+    rgba(249, 194, 128, 1) 50%,
+    rgba(255, 228, 116, 1) 100%
+  );
+  --rain: linear-gradient(
+    90deg,
+    rgba(96, 204, 252, 1) 0%,
+    rgba(96, 204, 252, 1) 50%,
+    rgba(96, 228, 252, 1) 100%
+  );
+  --cloud: linear-gradient(
+    90deg,
+    rgba(108, 243, 233, 1) 0%,
+    rgba(120, 244, 236, 1) 77%,
+    rgba(112, 252, 228, 1) 100%
+  );
+  --font: #282434;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--sunny);
+  color: var(--font);
+  font-family: "Overpass", sans-serif;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+#weather-page {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+#weather-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#location {
+  display: flex;
+  justify-content: center;
+}
+
+#location button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#search-icon {
+  width: 32px;
+}
+
+.sector {
+  padding: 10px;
+}
+
+#location-input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  font-family: "Overpass", sans-serif;
+  font-size: 30px;
+}
+
+#weather-info {
+  display: flex;
+  flex-direction: column;
+}
+
+#weather-icon {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#icon {
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 25px;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.additional {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+#temperature {
+  font-size: 55px;
+}
+
+#wind {
+  margin-right: 20px;
+}
+
+#daily-weather {
+  display: flex;
+  justify-content: center;
+}
+
+.day-card {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--font);
+  border-radius: 4px;
+  width: 150px;
+  margin: 20px;
+}
+
+.day-card img {
+  width: 64px;
+}
+
+#day-image {
+  display: flex;
+  justify-content: center;
+}
+
+#sticky-part {
+  background: transparent;
+  background-size:  100vw;
+}
+
+#hourly-weather {
+  display: flex;
+}
+
+.hour {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid var(--font);
+  border-radius: 4px;
+  width: 50px;
+  margin: 5px;
+}
+
+.hour img {
+  width: 32px;
+}
+
+@media only screen and (max-width: 1024px) {
+  #weather-page {
+    margin-top: 30px;
+    width: 100%;
+  }
+  #sticky-part {
+    position: sticky;
+    top: 0;
+    background: var(--sunny);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  #daily-weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #hourly-weather {
+    overflow-x: auto;
+  }
+  .day-card {
+    width: 320px;
+  }
+  .mobile-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    vertical-align: middle;
+  }
+  #day-temperature {
+    font-size: 60px;
+    padding: 0;
+    margin-right: 15px;
+    margin-top: 30px;
+  }
+  #day-image {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+  #img-day {
+    width: 128px;
+  }
+}

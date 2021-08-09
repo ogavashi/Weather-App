@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no"
+    />
+    <title>Weather App</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="https://image.flaticon.com/icons/png/512/3845/3845731.png" />
+  </head>
+  <body>
+    <div id="weather-page">
+      <div id="weather-wrapper">
+        <div id="location" class="sector">
+          <input
+            id="location-input"
+            type="text"
+            required
+            minlength="3"
+            placeholder="Search location..."
+          />
+          <button id="search-btn">
+            <img
+              id="search-icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"
+            />
+          </button>
+        </div>
+        <div id="weather-icon" class="sector">
+          <img id="icon" src="https://img.icons8.com/cute-clipart/256/000000/sun.png" />
+        </div>
+        <div id="sticky-part">
+          <div id="weather-info" class="sector">
+            <span class="info" id="description"></span>
+            <span class="info" id="temperature"></span>
+            <span class="info" id="additional">
+              <span id="wind" class="additional">
+                <img src="https://img.icons8.com/cute-clipart/32/000000/wind.png" />
+                <span id="wind-info">2km/h</span>
+              </span>
+              <span id="humidity" class="additional">
+                <img src="https://img.icons8.com/cute-clipart/32/000000/rainwater-catchment.png" />
+                <span id="humidity-info">34%</span>
+              </span>
+            </span>
+          </div>
+        </div>
+        <div id="hourly-weather"></div>
+        <div id="daily-weather" class="sector">
+          <div class="day-card">
+            <span id="day" class="info">Monday</span>
+            <div class="mobile-wrapper">
+              <span id="day-image">
+                <img
+                  class="info"
+                  id="img-day"
+                  src="https://img.icons8.com/cute-clipart/256/000000/sun.png"
+                />
+              </span>
+              <span id="day-temperature" class="info">26°</span>
+            </div>
+          </div>
+          <div class="day-card">
+            <span id="day" class="info">Tuesday</span>
+            <div class="mobile-wrapper">
+              <span id="day-image">
+                <img
+                  class="info"
+                  id="img-day"
+                  src="https://img.icons8.com/cute-clipart/256/000000/cloud-lighting.png"
+                />
+              </span>
+              <span id="day-temperature" class="info">20°</span>
+            </div>
+          </div>
+          <div class="day-card">
+            <span id="day" class="info">Wednesday</span>
+            <div class="mobile-wrapper">
+              <span id="day-image">
+                <img
+                  class="info"
+                  id="img-day"
+                  src="https://img.icons8.com/cute-clipart/256/000000/partly-cloudy-day.png"
+                />
+              </span>
+              <span id="day-temperature" class="info">22°</span>
+            </div>
+          </div>
+          <div class="day-card">
+            <span id="day" class="info">Thursday</span>
+            <div class="mobile-wrapper">
+              <span id="day-image">
+                <img
+                  class="info"
+                  id="img-day"
+                  src="https://img.icons8.com/cute-clipart/256/000000/sun.png"
+                />
+              </span>
+              <span id="day-temperature" class="info">27°</span>
+            </div>
+          </div>
+          <div class="day-card">
+            <span id="day" class="info">Friday</span>
+            <div class="mobile-wrapper">
+              <span id="day-image">
+                <img
+                  class="info"
+                  id="img-day"
+                  src="https://img.icons8.com/cute-clipart/256/000000/partly-cloudy-day.png"
+                />
+              </span>
+              <span id="day-temperature" class="info">24°</span>
+            </div>
+          </div>
+          <div class="day-card">
+            <span id="day" class="info">Saturday</span>
+            <div class="mobile-wrapper">
+              <span id="day-image">
+                <img
+                  class="info"
+                  id="img-day"
+                  src="https://img.icons8.com/cute-clipart/256/000000/cloud.png"
+                />
+              </span>
+              <span id="day-temperature" class="info">22°</span>
+            </div>
+          </div>
+          <div class="day-card">
+            <span id="day" class="info">Sunday</span>
+            <div class="mobile-wrapper">
+              <span id="day-image">
+                <img
+                  class="info"
+                  id="img-day"
+                  src="https://img.icons8.com/cute-clipart/256/000000/cloud-lighting.png"
+                />
+              </span>
+              <span id="day-temperature" class="info">20°</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js" async defer></script>
+  </body>
+</html>
